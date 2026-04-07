@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Frontend Mentor | 3-column preview card component</title>
+ <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+<style>
+ .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+:root{
+  --sedan-color: hsl(31, 77%, 52%);
+  --suv-color: hsl(184, 100%, 22%);
+  --luxury-color: hsl(179, 100%, 13%);
+  --text:white;
+  --primary-color:rgb(16, 16, 18);
+}
+  body {
+  
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #f0ede8;
+    font-family: 'DM Sans', sans-serif;
+    padding: 2rem;
+  }
+
+  .cards-wrapper {
+    display: flex;
+    gap: 0;
+    border-radius: 20px;
+    overflow: hidden;
+    max-width: 860px;
+    width: 100%;
+
+  }
+
+  .card {
+    flex: 1;
+    padding: 2.2rem 1.8rem 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    position: relative;
+    overflow: hidden;
+    
+  }
+  .card-sedan{ background-color:  hsl(31, 77%, 52%);}
+  .card-suv{ background-color:  hsl(184, 100%, 22%);}
+  .card-luxury{ background-color: hsl(179, 100%, 13%);} 
+
+  img{
+    font-size:10px;
+    display: block;
+    
+  }
+ h2{
+  color:var(--primary-color);
+ }
+
+  .card-title {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 2.4rem;
+    letter-spacing: 0.06em;
+    color: #fff;
+    line-height: 1;
+  }
+
+  .card-desc {
+    font-size: 0.88rem;
+    color: rgba(255,255,255,0.88);
+    line-height: 1.65;
+    font-weight: 300;
+    flex: 1;
+  }
+
+  .btn {
+    display: inline-block;
+    border: 2px solid rgba(255,255,255,0.7);
+    background: transparent;
+    color: #fff;
+    padding: 0.55rem 1.5rem;
+    border-radius: 999px;
+    font-size: 0.82rem;
+    font-family: 'DM Sans', sans-serif;
+    font-weight: 500;
+    align-self: flex-start;
+    margin-top: 0.4rem;
+    background-color:var(--text);
+  }
+
+  .btn:hover {
+    background: rgba(255,255,255,0.22);
+    border-color: #fff;
+    color:var()
+   
+  }
+@media(max-width:600px){ 
+ .cards-wrapper {
+    display: flex;
+    gap: 0;
+    border-radius: 20px;
+    overflow: hidden;
+    max-width: 860px;
+    width: 100%;
+flex-direction: column;
+flex-wrap: wrap;
+  }
+
+}
+</style> 
+</head>
+<body>
+
+<div class="cards-wrapper">
+
+ 
+  <div class="card card-sedan">
+   <img src="images/icon-sedans.svg" alt="">
+    <h2 class="card-title">Sedans</h2>
+    <p class="card-desc">Choose a sedan for its reliability and excellent fuel economy. Ideal for cruising in the city or on your next road trip.</p>
+    <button class="btn">Learn More</button>
+  </div>
+
+
+  <div class="card card-suv">
+    <img src="images/icon-suvs.svg" alt="">
+    <h2 class="card-title">SUVs</h2>
+    <p class="card-desc">Take an SUV for its spacious interior, power, and versatility. Perfect for your next family vacation and off-road adventures.</p>
+    <button class="btn">Learn More</button>
+  </div>
+
+ 
+  <div class="card card-luxury">
+  <img src="images/icon-luxury.svg" alt="">
+    <h2 class="card-title">Luxury</h2>
+    <p class="card-desc">Cruise in the best car brands without the bloated prices. Enjoy the enhanced comfort of a luxury rental and arrive in style.</p>
+    <button class="btn">Learn More</button>
+  </div>
+
+</div>
+
+</body>
+</html>
